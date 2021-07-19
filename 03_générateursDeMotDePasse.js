@@ -115,8 +115,9 @@ function randomcharfrom(array){
 }
 
 // var test = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
-// console.log(test);
-// console.log(shuffle(test));                          pourtant il marche ici
+// var teststr = '1234567891011';
+// console.log(teststr);
+// console.log(shuffle(teststr));                         
 
 function final_generator(n) {                                                                                                        
     let result = '';
@@ -130,9 +131,7 @@ function final_generator(n) {
     for ( let i = 0; i < n-3; i++ ) {
         result += randomcharfrom(characters);
     }
-    console.log(result);
-    const pass = shuffle(result);                       // shuffle marche pas??
-    return pass
+    return shuffle(Object.assign([],result)).join('')           //str to array (avec Object.assign) pour shuffle, puis join('') pour array to str
 }
 
 console.log(final_generator(15));
