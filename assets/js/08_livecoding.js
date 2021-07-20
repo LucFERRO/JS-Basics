@@ -20,9 +20,8 @@ inputhtml.onkeyup = inputhtml.onkeypress = function(){
     let progress_percent2 = progress_percent.toString().concat('%');
     document.getElementById("progress_bar").innerHTML = progress_percent2;
 
-    let bar_width = document.getElementById("progress").style.width;
+    // let bar_width = document.getElementById("progress").style.width;
     // bar_width = progress_percent2;
-    console.log(progress_percent2);
-
+    document.getElementById("progress").style.setProperty("width", progress_percent2.toString() ,"important");
 }
 
