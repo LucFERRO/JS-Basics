@@ -1,0 +1,16 @@
+
+#text_html{
+    width: 100%;
+    height: 200px;
+    align-items: start;
+    resize: none;
+    font-size: 2em;
+}
+
+#live{
+    font-size: 2em;
+}
+
+#count{
+    text-align: right;
+}
