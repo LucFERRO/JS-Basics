@@ -1,3 +1,7 @@
+//Longueur souhaitée pour le mdp
+let mdp_length = 8
+//Security check ligne 41
+
 //Les str
 const UPPERS_str = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 const specials_str = '&é(-è_çà)=~#{[|`@]}^$ù*,;:!¨£%µ?./§';
@@ -18,9 +22,7 @@ function password_gen(n) {
       result += randomcharfromstr(characters_str);
    }
    return result
-}
-console.log('Générateur de mot de passe de base:                           ',password_gen(8));
-        
+}    
 
  // Fonctionne mais avec str et pas array donc suit pas la consigne         
 function final_generator_str(n) {                                                                                                         
@@ -33,7 +35,17 @@ function final_generator_str(n) {
     }
     return shuffle(Object.assign([],result)).join('')           //str to array (avec Object.assign) pour shuffle, puis join('') pour array to str
 }
-console.log('Générateur de mot de passe avec au moins 1 spécial/maj/nombre:',final_generator_str(8));
+
+
+
+//Security check
+if (mdp_length<8){
+    console.log('MOT DE PASSE TROP COURT!')
+} else {
+    console.log('Générateur de mot de passe à '+mdp_length+' caractères de base:                           ',password_gen(mdp_length));
+    console.log('Générateur de mot de passe à '+mdp_length+' caractères avec au moins 1 spécial/maj/nombre:',final_generator_str(mdp_length));
+}
+
 
 
 // Prends les array mais les passe en str donc suit pas la consigne ????
@@ -47,7 +59,7 @@ function triche(n) {
     }
     return shuffle(Object.assign([],result)).join('')           //str to array (avec Object.assign) pour shuffle, puis join('') pour array to str
 }
-// console.log(triche(8));
+// console.log(triche(mdp_length));
 
  //Fonction finale avec le bonus (1 spécial 1 maj 1 nombre) mais avec le shuffle de Luc           
 function final_generator_array(n) {                                                                                                 
@@ -61,7 +73,7 @@ function final_generator_array(n) {
     var pass = shuffleWord(result);             // Pourquoi le shuffle de Luc marche et pas les shufflestr et shufflearray alors qu'ils marchent dans le navigateur
     return pass        
 }
-// console.log(final_generator_array(8));
+// console.log(final_generator_array(mdp_length));
 
 
 
