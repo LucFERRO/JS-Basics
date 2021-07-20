@@ -16,7 +16,13 @@ inputhtml.onkeyup = inputhtml.onkeypress = function(){
     let countdown = max_char - inputhtml.value.length;
     document.getElementById("count").innerHTML =  countdown;
 
-    let progress = 100*this.value.length/max_char;
-    document.getElementById("progress_bar").innerHTML = progress;
+    let progress_percent = 100*this.value.length/max_char;
+    let progress_percent2 = progress_percent.toString().concat('%');
+    document.getElementById("progress_bar").innerHTML = progress_percent2;
+
+    let bar_width = document.getElementById("progress").style.width;
+    // bar_width = progress_percent2;
+    console.log(progress_percent2);
+
 }
 
