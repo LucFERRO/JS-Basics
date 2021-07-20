@@ -4,8 +4,11 @@
 //         Si bonne rép: Message de félicitations et affichage du numéro en question
 //         Sinon: pas de chance, afficher le mauvais numéro et retenter
 
+const min = 1
+const max = 10
+
 function minijeu(a,b,c){
-    var num = Math.floor(Math.random() * 10);
+    var num = Math.floor(Math.random() * 10)+1;
     if (a!=num){
         console.log(`Pas de chance ! ${a} n'est pas le bon numéro ! Il te reste 2 chances.`);
         if (b!=num){
@@ -24,6 +27,44 @@ function minijeu(a,b,c){
 }
 
 minijeu(2,5,7);
+
+function minijeuavecgamemode(a,b,c,difficulty){
+    let num = Math.floor(Math.random() * 10)+1;
+    let expr = String(difficulty);
+    let gamemode = ['easy','normal','hard'];
+    switch (gamemode){
+        case (expr==gamemode[0]):
+            if (a!=num){
+                console.log(`Pas de chance ! ${a} n'est pas le bon numéro ! Il te reste 2 chances.`);
+                if (b!=num){
+                    console.log("Pas de chance ! "+b+" n'est pas le bon numéro ! Il te reste une dernière chance !");
+                    if (c!=num){
+                        console.log("Pas de chance ! "+c+" n'est pas le bon numéro ! Le bon numéro était "+num+" ! Tu dois 5 euros à Christophe !");
+                    } else {
+                        console.log("Bravo, c'était bien le "+num+" ! Tu as eu chaud!");
+                    }
+                } else {
+                    console.log("Bravo, il te restait encore une chance au pire. C'était bien le "+num+".");
+                }
+            } else {
+                console.log('Bravo ! Le numéro était ' +num+'. Du premier coup !');
+            }
+            break;
+        case (expr==gamemode[1]):
+            if (a!=num){
+                console.log(`Pas de chance ! ${a} n'est pas le bon numéro ! Il te reste une dernière chance !`);
+                if (b!=num){
+                    console.log("Pas de chance ! "+b+" n'est pas le bon numéro ! Le bon numéro était "+num+" ! Tu dois 5 euros à Christophe !");
+                } else {
+                    console.log("Bravo, c'était bien le "+num+" ! Tu as eu chaud!");
+                }
+            } else {
+                console.log('Bravo ! Le numéro était ' +num+'. Du premier coup !');
+            }
+            break;
+    }
+}
+minijeuavecgamemode(2,5,7,'normal');
 
 
 
