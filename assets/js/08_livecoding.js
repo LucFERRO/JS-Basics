@@ -15,6 +15,15 @@ let result = document.getElementById("live");
 
 document.getElementById("count").innerHTML = max_char;
 
+let loading = document.getElementById('gif');
+inputhtml.onfocus = () => {
+    loading.style.visibility = "visible";
+}
+inputhtml.onblur = () => {
+    loading.style.visibility = "hidden";
+}
+
+
 inputhtml.onkeyup = inputhtml.onkeypress = function(){
     document.getElementById("live").innerHTML = this.value;
 
@@ -60,6 +69,7 @@ inputhtml.onkeyup = inputhtml.onkeypress = function(){
     // } else {
     //     document.getElementById("progress").style.backgroundColor = "#FF0000";
     // }
+
 
     switch (progress_percent){
         case 0:

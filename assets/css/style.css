@@ -19,6 +19,16 @@ header {
     text-align: right;
 }
 
+#head_live_coding{
+    display: flex;
+}
+
+#gif {
+    width: 75px;
+    height: 75px;
+    visibility: hidden;
+}
+
 #live_coding>h2{
     font-size: 2.5em;
 }
