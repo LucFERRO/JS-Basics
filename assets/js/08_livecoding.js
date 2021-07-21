@@ -7,17 +7,17 @@
 // moyenne = total/ages.length;
 // console.log(moyenne);
 
-let max_char = 200;     // Changer le nombre de caractères max dans le textarea
+let max_char = 200;     // Changer le nombre de caractères max dans le résultat
 
 
 let inputhtml = document.getElementById("text_html");
-let inputcss = document.getElementById("text_css");
+// let inputcss = document.getElementById("text_css");
 let result = document.getElementById("live");
 
 document.getElementById("count").innerHTML = max_char;
 
-let loading = document.getElementById('gif');
 
+let loading = document.getElementById('gif');               // Gif de chargement quand focus sur le textarea
 inputhtml.onfocus = () => {
     loading.style.visibility = "visible";
 }
@@ -36,7 +36,7 @@ inputhtml.onblur = () => {
 inputhtml.onkeyup = inputhtml.onkeypress = inputhtml.onkeyup = inputhtml.onkeypress = function(){
     document.getElementById("live").innerHTML = this.value;
 
-    let countdown = max_char - result.textContent.length;
+    let countdown = max_char - result.textContent.length;                                                           // Décompte
     document.getElementById("count").innerHTML =  countdown;
 
     let progress_percent = 100*result.textContent.length/max_char;
@@ -119,7 +119,7 @@ inputhtml.onkeyup = inputhtml.onkeypress = inputhtml.onkeyup = inputhtml.onkeypr
 
 }
 
-function boldifiant(){
+function boldifiant(){                      //Boutons bold, italic, underline
     inputhtml.value += "<b></b>";
 }
 function italifiant(){
