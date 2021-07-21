@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel=stylesheet href="assets/css/stylecard.css" type="text/css"/>
+    <script src="assets/js/07_creditCard.js" defer></script>
+    <title>Instant Coding</title>
+</head>
+<body>
+    <header>
+        <h1>Paiement par carte de crédit</h1>
+        <h2>Frais de transaction 0.00€</h2>
+    </header>
+    <section>
+        <div id="card">
+            <div id="image">
+
+            </div>
+            <div>
+                <p>Paiement sécurisé par HiPay SAS, 256-bit SSL</p>
+            </div>
+        </div>
+        <div id="infos">
+            <form>         
+                <h2>Ajouter des données</h2>
+                <div>
+                    <label>Numéro de la carte</label>
+                    <input>
+                </div>
+                <div>
+                    <label>Titulaire de la carte</label>
+                    <input>
+                </div>
+                <div id="exp_cvc">
+                    <div>
+                        <label>Date d'expiration</label>
+                        <input placeholder="MM / YY">
+                    </div>
+                    <div>
+                        <label>Cryptogramme</label>
+                        <input placeholder="CVC">
+                    </div>
+                </div>
+                <button id="pay" title="MONEY MONEY MONEY" >Payer 35,49€</button>
+            </form>
+        </div>
+    </section>
+</body>
+</html>
