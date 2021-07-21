@@ -7,7 +7,7 @@
 // moyenne = total/ages.length;
 // console.log(moyenne);
 
-let max_char = 200;     // Changer le nombre de caractères max dans le textarea
+let max_char = 10;     // Changer le nombre de caractères max dans le textarea
 
 
 let inputhtml = document.getElementById("text_html");
@@ -25,15 +25,15 @@ inputhtml.onblur = () => {
     loading.style.visibility = "hidden";
 }
 
-inputcss.onfocus = () => {
-    loading.style.visibility = "visible";
-}
-inputcss.onblur = () => {
-    loading.style.visibility = "hidden";
-}
+// inputcss.onfocus = () => {
+//     loading.style.visibility = "visible";
+// }
+// inputcss.onblur = () => {
+//     loading.style.visibility = "hidden";
+// }
 
 
-inputhtml.onkeyup = inputhtml.onkeypress = function(){
+inputhtml.onkeyup = inputhtml.onkeypress = inputhtml.onkeyup = inputhtml.onkeypress = function(){
     document.getElementById("live").innerHTML = this.value;
 
     let countdown = max_char - result.textContent.length;
@@ -117,11 +117,17 @@ inputhtml.onkeyup = inputhtml.onkeypress = function(){
     // }
 
 
-
-
-
-
-
-
 }
 
+function boldifiant(){
+    inputhtml.value += "<b></b>";
+}
+function italifiant(){
+    inputhtml.value += "<i></i>";
+}
+function souslignifiant(){
+    inputhtml.value += "<i></i>";
+}
+// function colors(){
+//     document.getElementByClassName("colorz").style.visibility = "visible";
+// }

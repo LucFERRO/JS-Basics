@@ -7,21 +7,47 @@ header {
     display: flex;
 }
 
+#fioritures {
+    display: flex;
+}
+
+/* #fioritures>ul {
+    list-style-type: none;
+}
+
+.colorz {
+    visibility: hidden;
+} */
+
+#bold, #italic, #underline{
+    width: 50px;
+    height: 50px;
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+/* #colors {
+    width: 230px;
+    height: 50px;
+    font-size: 50px;
+    margin-bottom: 20px; 
+} */
+
 #text_html{
-    width: 50%;
+    width: 100%;
     height: 200px;
     align-items: start;
     resize: none;
     font-size: 2em;
 }
 
-#text_css{
+/* #text_css{
     width: 50%;
     height: 200px;
     align-items: start;
     resize: none;
     font-size: 2em;
-}
+} */
 
 #live{
     font-size: 2em;
@@ -47,7 +73,7 @@ header {
 
 #progress_bar{
     width: 100%;
-    height: 30px;
+    height: 10px;
     background-color: grey;
     font-size: 1.5em;
 }
