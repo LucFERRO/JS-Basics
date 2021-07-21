@@ -7,7 +7,7 @@
 // moyenne = total/ages.length;
 // console.log(moyenne);
 
-let max_char = 10;     // Changer le nombre de caractères max dans le textarea
+let max_char = 200;     // Changer le nombre de caractères max dans le textarea
 
 
 let inputhtml = document.getElementById("text_html");
