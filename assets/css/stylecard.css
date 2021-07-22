@@ -87,7 +87,8 @@ header>p>span {
 }
 
 #card_code {
-    font-size: 1.8em;
+    margin: 40px 0 0 0;
+    font-size: 2em;
     text-align: center;
     color: whitesmoke;
 }
@@ -98,10 +99,14 @@ header>p>span {
 }
 
 #card_bottom_top {
-    height: 45px;
+    height: 20px;
 }
 
-
+#card_bottom_bot {
+    display: flex;
+    color: whitesmoke;
+    justify-content: space-around;
+}
 
 /* Card  */
 #card_right input {
