@@ -18,6 +18,7 @@ document.getElementById("count").innerHTML = max_char;
 
 
 let loading = document.getElementById('gif');               // Gif de chargement quand focus sur le textarea
+
 inputhtml.onfocus = () => {
     loading.style.visibility = "visible";
 }
@@ -33,7 +34,7 @@ inputhtml.onblur = () => {
 // }
 
 
-inputhtml.onkeyup = inputhtml.onkeypress = inputhtml.onkeyup = inputhtml.onkeypress = function(){
+inputhtml.onkeyup = inputhtml.onkeypress = function(){
     document.getElementById("live").innerHTML = this.value;
 
     let countdown = max_char - result.textContent.length;                                                           // Décompte
@@ -44,6 +45,8 @@ inputhtml.onkeyup = inputhtml.onkeypress = inputhtml.onkeyup = inputhtml.onkeypr
 
     if (countdown==0){                                                                                             // Douille compteur en bas et pas en haut
         inputhtml.setAttribute("maxlength",inputhtml.value.length);
+    } else {
+        inputhtml.setAttribute("maxlength",'');
     }
 
     document.getElementById("progress").style.width = progress_percent.toString()+'%';                              //Change la width avec le %
