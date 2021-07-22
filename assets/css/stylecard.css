@@ -1,1 +1,87 @@
 /* Credit Card */
+/* section *{
+    border: 1px solid red;
+} */
+
+header {
+    text-align: center;
+}
+
+header>h1 {
+    font-size: 2.5em;
+    color: orangered;
+}
+
+header>p {
+    font-size: 1.5em;
+}
+
+header>p>span {
+    font-weight: bold;
+    color: green;
+}
+
+#card {
+    display: flex;
+    justify-content: center;
+}
+
+#card_left, #card_right{
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+#card_left {
+    flex-direction: column;
+}
+
+#card_right>form>div {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 10px 0;
+}
+
+#card_right>form {
+    display: flex;
+    flex-direction: column;
+}
+
+#exp_cvc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#labels {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+#labels>div>input {
+    width: 100%;
+    height: 20px;
+}
+
+#date {
+    border: solid 0.5px grey;
+    border-radius: 5px 0 0 5px;
+}
+
+#crypt {
+    border: solid 0.5px grey;
+    border-radius: 0 5px 5px 0;
+}
+
+#pay {
+    background-color: orangered;
+    color: white;
+    font-size: 1em;
+    border: orangered;
+    height: 40px;
+    border-radius: 8px;
+}

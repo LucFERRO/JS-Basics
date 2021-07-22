@@ -11,20 +11,19 @@
 <body>
     <header>
         <h1>Paiement par carte de crédit</h1>
-        <h2>Frais de transaction 0.00€</h2>
+        <p>Frais de transaction <span>0.00€</span></p>
     </header>
-    <section>
-        <div id="card">
+    <section id="card">
+        <div id="card_left">
             <div id="image">
 
             </div>
-            <div>
+            <div id="security">
                 <p>Paiement sécurisé par HiPay SAS, 256-bit SSL</p>
             </div>
         </div>
-        <div id="infos">
+        <div id="card_right">
             <form>         
-                <h2>Ajouter des données</h2>
                 <div>
                     <label>Numéro de la carte</label>
                     <input>
@@ -34,16 +33,18 @@
                     <input>
                 </div>
                 <div id="exp_cvc">
-                    <div>
-                        <label>Date d'expiration</label>
-                        <input placeholder="MM / YY">
-                    </div>
-                    <div>
-                        <label>Cryptogramme</label>
-                        <input placeholder="CVC">
+                    <div id="labels">
+                        <div>
+                            <label>Date d'expiration</label>
+                            <input placeholder="   MM / YY" id="date">
+                        </div>
+                        <div>
+                            <label>Cryptogramme</label>
+                            <input placeholder="   CVC" id="crypt">
+                        </div>
                     </div>
                 </div>
-                <button id="pay" title="MONEY MONEY MONEY" >Payer 35,49€</button>
+                <button id="pay" title="MONEY MONEY MONEY" >Payer 35.49€</button>
             </form>
         </div>
     </section>
