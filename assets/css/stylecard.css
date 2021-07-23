@@ -49,11 +49,9 @@ header>p>span {
     background-color: gainsboro;
     border: 1px solid gainsboro;
     border-radius: 15px;
+    margin: 45px 0 0 0;
 }
 
-#top {
-    height: 60px;
-}
 
 #card_second {
     height: 55px;
