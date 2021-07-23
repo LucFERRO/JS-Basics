@@ -41,7 +41,7 @@ header>p>span {
     flex-direction: column;
 }
 
-/* Card */
+/* Card front */
 
 #background {
     height: 250px;
@@ -62,7 +62,7 @@ header>p>span {
     height: 100%;
     width: 20%;
     background-color:rgb(175, 171, 171);
-    margin: 0 0 20px 40px;
+    margin: 35px 0 20px 25px;
     border-radius: 8px;
 }
 
@@ -75,9 +75,6 @@ header>p>span {
     border-radius: 0 8px 8px 0;
 }
 
-#card_second_left {
-    margin: 35px 0 0 25px;
-}
 
 #card_code {
     margin: 80px 0 0 0;
@@ -98,7 +95,85 @@ header>p>span {
     margin: 20px 0 0 0;
 }
 
-/* Card  */
+/* Fin Card front */
+
+
+/* Card back */
+
+#background_back {
+    height: 250px;
+    width: 400px;
+    background-color: gainsboro;
+    border: 1px solid gainsboro;
+    border-radius: 15px;
+    margin: 45px 0 0 0;
+}
+
+
+#card_top_back {
+    height: 55px;
+    background-color: black;
+    margin: 30px 0 0 0;
+}
+
+#bar_cvc {
+  display:flex;
+}
+
+#card_bar_back {
+    height: 40px;
+    width: 80%;
+    background-color: white;
+    margin: 25px 0 0 8px;
+}
+
+#card_cvc {
+      margin: 25px 0 0 18px;
+      color: white;
+      font-weight: bolder;
+}
+
+#card_bottom_back>div {
+    display: flex;
+    flex-direction: row;
+}
+
+#card_bottom_back {
+    height: 55px;
+    display: flex;
+}
+
+#card_chip_back {
+    height: 100%;
+    width: 75px;
+    background-color:rgb(175, 171, 171);
+    margin: 15px 0 20px 15px;
+    border-radius: 8px;
+}
+
+#card_chip_back>div {
+    background-color:gainsboro;
+    position: relative;
+    top: 10px;
+    height: 35px;
+    margin: 0 20px 0 0;
+    border-radius: 0 8px 8px 0;
+}
+
+#card_text_back {
+    color: white;
+    width: 250px;
+    font-size: 0.6em;
+    text-align: center;
+    margin: 15px 20px 0 25px;
+  }
+
+/* Fin card back */
+
+
+
+
+
 
 /* Form */
 
@@ -174,11 +249,10 @@ header>p>span {
     text-align: center;
     transition: transform 0.6s;
     transform-style: preserve-3d;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   }
   
   .flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
+    transform: rotateY(-180deg);
   }
   
   .flip-card-front, .flip-card-back {
@@ -189,13 +263,8 @@ header>p>span {
     backface-visibility: hidden;
   }
   
-  .flip-card-front {
-    background-color: #bbb;
-    color: black;
-  }
+
   
   .flip-card-back {
-    background-color: #2980b9;
-    color: white;
-    transform: rotateY(180deg);
+    transform: rotateY(-180deg);
   }

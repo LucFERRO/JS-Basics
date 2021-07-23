@@ -28,3 +28,11 @@ input_date.onkeypress = input_date.onkeyup = function() {
     }
 }
 
+input_crypt.onkeypress = input_crypt.onkeyup = function() {
+    img_cvc.innerHTML = this.value;
+    if (crypt.value == ''){
+        img_cvc.innerHTML = '123';
+    }
+}
+
+
