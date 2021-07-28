@@ -154,7 +154,7 @@ header>p>span {
     border-radius: 8px;
 }
 
-#card_chip_back>div {
+ #card_chip_back>div {                       /* Front chip morceau */
     background-color:gainsboro;
     position: relative;
     top: 10px;
@@ -243,7 +243,7 @@ header>p>span {
   
   .flip-card-inner {
     position: relative;
-    width: 100%;
+    width: 400px;
     height: 100%;
     text-align: center;
     transition: transform 0.5s;
@@ -256,7 +256,7 @@ header>p>span {
   
   .flip-card-front, .flip-card-back {
     position: absolute;
-    width: 100%;
+    width: 400px;
     height: 100%;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
@@ -267,8 +267,6 @@ header>p>span {
   }
 
   #security {
-      /* width:2000px; */
-      position: relative;
-      top: 280px;
-      left: -80px;
+    left: 15%;
+
   }
