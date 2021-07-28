@@ -16,9 +16,9 @@ input_number.onkeypress = input_number.onkeyup = function() {
     }
 }
 input_owner.onkeypress = input_owner.onkeyup = function() {
-    img_name.innerHTML = this.value;
+    img_name.innerHTML = "<h3>"+this.value+"</h3>";
     if (input_owner.value == ''){
-        img_name.innerHTML = 'FULL NAME';
+        img_name.innerHTML = '<h3>FULL NAME</h3>';
     }
 }
 input_date.onkeypress = input_date.onkeyup = function() {
@@ -35,4 +35,10 @@ input_crypt.onkeypress = input_crypt.onkeyup = function() {
     }
 }
 
+input_crypt.onfocus = () => {
+    document.getElementById('flip').style.transform = "rotateY(180deg)";
+}
 
+input_crypt.onblur = () => {
+    document.getElementById('flip').style.transform = "rotateY(0deg)";
+}

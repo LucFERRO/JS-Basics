@@ -42,8 +42,19 @@ header>p>span {
     
 }
 
+#card_name {
+    width: 150px;
+}
 
+#card_date {
+    position: relative;
+    width: 50px;
+    right: -20px;
+}
 
+h3 {
+    margin: 0;
+}
 /* Card front */
 
 #background {
@@ -84,6 +95,11 @@ header>p>span {
     font-size: 2em;
     text-align: center;
     color: whitesmoke;
+}
+
+#card_bottom {
+    position: relative;
+    right: 20px;
 }
 
 #card_bottom>div {
@@ -250,10 +266,15 @@ header>p>span {
     transform-style: preserve-3d;
   }
   
-  .flip-card:hover .flip-card-inner {
+  /* .flip-card:hover .flip-card-inner {
     transform: rotateY(180deg);
-  }
+  } */
   
+  .flip-card-inner {
+    transform: rotateY(0deg);
+  } 
+  
+
   .flip-card-front, .flip-card-back {
     position: absolute;
     width: 400px;
