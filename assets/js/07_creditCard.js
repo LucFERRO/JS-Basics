@@ -24,7 +24,7 @@ input_owner.onkeypress = input_owner.onkeyup = function() {
 input_date.onkeypress = input_date.onkeyup = function() {
     img_date.innerHTML = this.value;
     if (input_date.value == ''){
-        img_date.innerHTML = 'MM/YYYY';
+        img_date.innerHTML = 'MM/YY';
     }
 }
 
@@ -44,10 +44,24 @@ input_crypt.onblur = () => {
 }
 
 
+/* Gestion lettres/chiffres dans les inputs de nom/code */
+
+function NoDigits(event) {
+    if (event.which >= 48 && event.which <= 57){
+        event.preventDefault();
+    }
+}
+
 function NoNonDigits(event) {
     if (event.which < 48 || event.which > 57){
         event.preventDefault();
     }
-  };
+}
 
+input_owner.addEventListener('keypress', NoDigits, false);  
 input_crypt.addEventListener('keypress', NoNonDigits, false);
+input_date.addEventListener('keypress', NoNonDigits, false);
+
+/* Code de la carte */
+
+
