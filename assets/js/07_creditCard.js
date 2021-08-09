@@ -42,3 +42,12 @@ input_crypt.onfocus = () => {
 input_crypt.onblur = () => {
     document.getElementById('flip').style.transform = "rotateY(0deg)";
 }
+
+
+function NoNonDigits(event) {
+    if (event.which < 48 || event.which > 57){
+        event.preventDefault();
+    }
+  };
+
+input_crypt.addEventListener('keypress', NoNonDigits, false);
