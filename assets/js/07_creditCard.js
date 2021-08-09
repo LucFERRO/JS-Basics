@@ -61,6 +61,7 @@ function NoNonDigits(event) {
 input_owner.addEventListener('keypress', NoDigits, false);  
 input_crypt.addEventListener('keypress', NoNonDigits, false);
 input_date.addEventListener('keypress', NoNonDigits, false);
+input_number.addEventListener('keypress', NoNonDigits, false);
 
 /* Code de la carte */
 
