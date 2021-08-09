@@ -14,6 +14,9 @@ input_number.onkeypress = input_number.onkeyup = function() {
     if (input_number.value == ''){
         img_number.innerHTML = '• • • • &nbsp; • • • • &nbsp; • • • • &nbsp; • • • •';
     }
+    if (input_number.value.length % 5 === 4 && input_number.value.length<15) {              /* Même "bug" qu'au slash de la date, trouve pas comment*/
+        input_number.value += " ";
+    }
 }
 input_owner.onkeypress = input_owner.onkeyup = function() {
     img_name.innerHTML = "<h3>"+this.value+"</h3>";
@@ -25,6 +28,12 @@ input_date.onkeypress = input_date.onkeyup = function() {
     img_date.innerHTML = this.value;
     if (input_date.value == ''){
         img_date.innerHTML = 'MM/YY';
+    } else if (input_date.value.length === 2) {
+        input_date.value += "/";
+    // } else if (input_date.value.length === 3) {                                   Marche pas?
+    //     if (this.which === 33){
+    //         input_date.substr(input_date.length);
+    //     }
     }
 }
 

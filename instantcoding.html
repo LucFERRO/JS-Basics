@@ -71,13 +71,13 @@
                 </div>
                 <div>
                     <label>Titulaire de la carte</label>
-                    <input id="card_owner">
+                    <input id="card_owner" pattern="\D{2,30} \D{2,30}" maxlength="61">
                 </div>
                 <div id="exp_cvc">
                     <div id="labels">
                         <div>
                             <label>Date d'expiration</label>
-                            <input placeholder="   MM / YY" id="date" pattern="\w{2}/\w{2}" maxlength="5">
+                            <input placeholder="   MM / YY" id="date" pattern="(0[1-9]|1[0-2])/[0-9]{2}" maxlength="5">
                         </div>
                         <div>
                             <label>Cryptogramme</label>
