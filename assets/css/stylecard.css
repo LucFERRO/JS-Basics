@@ -102,6 +102,14 @@ h3 {
     right: 20px;
 }
 
+#card_number {
+    border-radius: 5px;
+}
+
+#card_owner {
+    border-radius: 5px;
+}
+
 #card_bottom>div {
     display: flex;
     flex-direction: row;
@@ -194,6 +202,7 @@ h3 {
 
 #card_right input {
     height: 25px;
+    padding: 0 0 0 10px;
 }
 
 #card_right>form>div {
@@ -224,16 +233,15 @@ h3 {
 }
 
 #labels>div>input {
-    width: 100%;
+    width: 98%;
+    padding: 0 0 0 10px;
 }
 
 #date {
-    border: solid 0.5px grey;
     border-radius: 5px 0 0 5px;
 }
 
 #crypt {
-    border: solid 0.5px grey;
     border-radius: 0 5px 5px 0;
 }
 

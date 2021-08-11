@@ -28,12 +28,11 @@ input_date.onkeypress = input_date.onkeyup = function() {
     img_date.innerHTML = this.value;
     if (input_date.value == ''){
         img_date.innerHTML = 'MM/YY';
-    } else if (input_date.value.length === 2) {
+    } else if (input_date.value.length == 2) {
         input_date.value += "/";
-    // } else if (input_date.value.length === 3) {                                   Marche pas?
-    //     if (this.which === 33){
-    //         input_date.substr(input_date.length);
-    //     }
+    // } else if (input_date.value.length == 4 && this.which == 8) {                                  /* Marche pas?*/
+    //         input_date.value.innerHTML = input_date.substr(0,input_date.length-1);
+    // }
     }
 }
 
